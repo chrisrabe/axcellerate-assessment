@@ -1,0 +1,24 @@
+.search-field-container {
+  display: flex;
+  flex-direction: row;
+  font-family: Roboto, serif;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  gap: 0.5rem;
+}
+
+.search-field-icon {
+  height: 1.5rem;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.search-field-input {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: 1rem;
+  color: #20374b;
+  height: 100%;
+  width: 100%;
+}

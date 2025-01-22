@@ -1,18 +1,18 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { default as Example } from "./Example";
+import { default as SearchField } from "./SearchField";
 
 const meta = {
-  title: "Example/Sample",
-  component: Example,
+  title: "Fields/SearchField",
+  component: SearchField,
   tags: ["autodocs"],
   parameters: {
     layout: "fullscreen",
   },
   args: {},
-} satisfies Meta<typeof Example>;
+} satisfies Meta<typeof SearchField>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Component: Story = {};

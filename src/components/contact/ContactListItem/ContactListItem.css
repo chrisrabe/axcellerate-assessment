@@ -1,0 +1,56 @@
+:root {
+  --highlight-primary: #f4f1fd;
+
+  --text-color-primary: #6b46ef;
+  --text-color-dark: #20374b;
+  --text-color-light: #5a6d80;
+
+  --secondary-hover-color: #f2f5f7;
+}
+
+.contact-list-item-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: Roboto, serif;
+  gap: 0.5rem;
+  border-radius: 6px;
+  padding: 0.5rem;
+}
+
+.contact-list-item-container:hover {
+  background-color: var(--secondary-hover-color);
+  cursor: pointer;
+}
+
+.contact-list-item-container-selected {
+  background-color: var(--highlight-primary);
+}
+
+.contact-list-item-avatar {
+  border-radius: 100%;
+  object-fit: cover;
+  width: 3rem;
+  height: 3rem;
+}
+
+.contact-list-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-list-item-info-name {
+  color: var(--text-color-dark);
+  font-weight: 500;
+}
+
+.contact-list-item-info-name-selected {
+  color: var(--text-color-primary);
+}
+
+.contact-list-item-info-email {
+  color: var(--text-color-light);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
