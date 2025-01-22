@@ -15,6 +15,9 @@ interface ContactListProps {
   selectedContact?: Contact;
 }
 
+/**
+ * Displays list of contacts vertically in a collapsible list
+ */
 const ContactList: React.FC<ContactListProps> = ({
   headerText,
   contacts,

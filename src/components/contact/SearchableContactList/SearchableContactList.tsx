@@ -5,12 +5,17 @@ import SearchField from "../../fields/SearchField";
 import ContactList from "../ContactList";
 
 export interface SearchableContactListProps {
+  /** List of contacts. */
   contacts: Contact[];
+  /** Display all contacts' emails by using the email variant. */
   variant?: "standard" | "email";
   setSelectedContact?: (contact: Contact) => void;
   selectedContact?: Contact;
 }
 
+/**
+ * Component for searching attended and absent contacts.
+ */
 const SearchableContactList: React.FC<SearchableContactListProps> = ({
   contacts,
   selectedContact,

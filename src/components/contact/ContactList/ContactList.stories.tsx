@@ -16,15 +16,6 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const NoContacts: Story = {
-  name: "No Contacts",
-  args: {
-    variant: "standard",
-    headerText: "Absent",
-    contacts: [],
-  },
-};
-
 export const StandardFullList: Story = {
   args: {
     variant: "standard",
@@ -89,5 +80,14 @@ export const EmailVariant: Story = {
         status: ContactStatus.Absent,
       },
     ],
+  },
+};
+
+export const NoContacts: Story = {
+  name: "No Contacts",
+  args: {
+    variant: "standard",
+    headerText: "Absent",
+    contacts: [],
   },
 };

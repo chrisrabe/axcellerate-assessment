@@ -9,6 +9,9 @@ const isFragment = (child: React.ReactNode) => {
   return React.isValidElement(child) && child.type === React.Fragment;
 };
 
+/**
+ * Displays all children vertically
+ */
 const Section: React.FC<SectionProps> = ({ children }) => {
   // This extracts children from fragment elements
   const validChildren = [children]
