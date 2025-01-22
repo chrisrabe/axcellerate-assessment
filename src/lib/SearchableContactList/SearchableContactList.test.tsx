@@ -1,13 +1,13 @@
 import { render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { useState } from "react";
-import SearchableContactList from ".";
 import {
   absentContacts,
   allContacts,
   attendedContacts,
-} from "../../../mocks/mockContacts";
-import { type Contact, ContactStatus } from "../../../types/Contact";
+} from "../../mocks/mockContacts";
+import { type Contact, ContactStatus } from "../../types/Contact";
+import SearchableContactList from "./index";
 
 const WithSelectedContact = () => {
   const [selectedContact, setSelectedContact] = useState<Contact>();

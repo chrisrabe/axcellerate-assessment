@@ -1,8 +1,8 @@
 import type React from "react";
 import { useState } from "react";
-import { type Contact, ContactStatus } from "../../../types/Contact";
-import SearchField from "../../fields/SearchField";
-import ContactList from "../ContactList";
+import ContactList from "../../components/contact/ContactList";
+import SearchField from "../../components/fields/SearchField";
+import { type Contact, ContactStatus } from "../../types/Contact";
 
 export interface SearchableContactListProps {
   /** List of contacts. */

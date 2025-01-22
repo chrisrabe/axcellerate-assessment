@@ -4,7 +4,7 @@ import { ContactStatus } from "../../../types/Contact";
 import { default as ContactList } from "./ContactList";
 
 const meta = {
-  title: "Contact/ContactList",
+  title: "Components/Contact/ContactList",
   component: ContactList,
   tags: ["autodocs"],
   parameters: {

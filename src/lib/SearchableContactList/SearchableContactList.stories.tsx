@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { allContacts } from "../../../mocks/mockContacts";
+import { allContacts } from "../../mocks/mockContacts";
 import { default as SearchableContactList } from "./SearchableContactList";
 
 const meta = {
-  title: "Contact/SearchableContactList",
+  title: "Component Library/SearchableContactList",
   component: SearchableContactList,
   tags: ["autodocs"],
   parameters: {

@@ -4,7 +4,7 @@ import ContactListItem from "../../contact/ContactListItem";
 import { default as Section } from "./Section";
 
 const meta = {
-  title: "Section/Section",
+  title: "Components/Section/Section",
   component: Section,
   tags: ["autodocs"],
   parameters: {

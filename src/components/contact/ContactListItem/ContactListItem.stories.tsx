@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { default as ContactListItem } from "./ContactListItem";
 
 const meta = {
-  title: "Contact/ContactListItem",
+  title: "Components/Contact/ContactListItem",
   component: ContactListItem,
   tags: ["autodocs"],
   parameters: {

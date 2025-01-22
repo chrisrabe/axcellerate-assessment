@@ -23,6 +23,15 @@ npm run test
 
 ### Technical Details
 
+#### Directory Structure
+
+| Directory  | Purpose                                                   |
+|:-----------|:----------------------------------------------------------|
+| components | contains smaller components used by the component library |
+| lib        | Exported components by the component library              |
+| mocks      | mock data                                                 |
+| types      | type definition for shared interfaces                     |
+
 #### Testing Strategy
 My strategy for testing is to capture all the behaviour from the entrypoint of the app first (in my case, it is the SearchableContactList component).
 This allowed me to cover majority of the application code while creating robust tests.
