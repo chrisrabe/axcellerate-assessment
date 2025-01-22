@@ -1,7 +1,7 @@
 import { MagnifyingGlassIcon } from "@heroicons/react/16/solid";
 import type React from "react";
 import type { ChangeEvent } from "react";
-import "@fontsource/roboto";
+import "@fontsource/roboto/400.css";
 import "./SearchField.css";
 
 interface SearchFieldProps {
@@ -20,6 +20,7 @@ const SearchField: React.FC<SearchFieldProps> = ({
       <MagnifyingGlassIcon className="search-field-icon" />
       <input
         type="text"
+        aria-label="search"
         className="search-field-input"
         placeholder={placeholder ?? "Search"}
         value={value}

@@ -4,7 +4,7 @@ import type { Contact } from "../../../types/Contact";
 import Section from "../../section/Section";
 import SectionHeader from "../../section/SectionHeader";
 import ContactListItem from "../ContactListItem";
-import "@fontsource/roboto";
+import "@fontsource/roboto/400.css";
 import "./ContactList.css";
 
 interface ContactListProps {
@@ -27,7 +27,7 @@ const ContactList: React.FC<ContactListProps> = ({
   const [isExpanded, setIsExpanded] = useState(expanded);
 
   return (
-    <div className="contact-list-container">
+    <section className="contact-list-container">
       <SectionHeader
         headerText={headerText}
         isExpanded={isExpanded}
@@ -52,7 +52,7 @@ const ContactList: React.FC<ContactListProps> = ({
       {isExpanded && contacts.length === 0 && (
         <div className="no-contacts-info">No contacts</div>
       )}
-    </div>
+    </section>
   );
 };
 

@@ -7,7 +7,25 @@
   },
   "files": {
     "ignoreUnknown": false,
-    "ignore": []
+    "ignore": [
+      "**/node_modules/**",
+      "**/playwright/test-results/**",
+      "**/playwright/playwright-report/**",
+      "**/coverage/**",
+      "**/scripts/**",
+      "**/cert/**",
+      "**/docs/**",
+      "**/cdk.out/**",
+      "**/dist/**",
+      "**/.next/**",
+      "**/.nyc_output/**",
+      "**/.vscode/**",
+      "**/.github/**",
+      "**/.api/**",
+      "**/*.json",
+      "**/**/app.cy.ts",
+      "*.json"
+    ]
   },
   "formatter": {
     "enabled": true,
@@ -26,6 +44,9 @@
       },
       "suspicious": {
         "noArrayIndexKey": "off"
+      },
+      "style": {
+        "noNonNullAssertion": "off"
       }
     }
   },

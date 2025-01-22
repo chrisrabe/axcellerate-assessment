@@ -7,7 +7,7 @@ import ContactList from "../ContactList";
 export interface SearchableContactListProps {
   contacts: Contact[];
   variant?: "standard" | "email";
-  setSelectedContact: (contact: Contact) => void;
+  setSelectedContact?: (contact: Contact) => void;
   selectedContact?: Contact;
 }
 

@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
-import { fn } from "@storybook/test";
 import { allContacts } from "../../../mocks/mockContacts";
 import { default as SearchableContactList } from "./SearchableContactList";
 
@@ -21,7 +20,6 @@ export const Standard: Story = {
   name: "Standard Contact List",
   args: {
     contacts: allContacts,
-    setSelectedContact: fn(),
   },
 };
 
@@ -30,7 +28,6 @@ export const EmailVariant: Story = {
   args: {
     contacts: allContacts,
     variant: "email",
-    setSelectedContact: fn(),
   },
 };
 
@@ -38,7 +35,6 @@ export const StandardWithSelected: Story = {
   name: "Standard Contact List With Selected Contact",
   args: {
     contacts: allContacts,
-    setSelectedContact: fn(),
     selectedContact: allContacts[0],
   },
 };
@@ -48,7 +44,6 @@ export const EmailVariantWithSelected: Story = {
   args: {
     contacts: allContacts,
     variant: "email",
-    setSelectedContact: fn(),
     selectedContact: allContacts[0],
   },
 };
