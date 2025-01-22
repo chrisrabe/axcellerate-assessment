@@ -19,6 +19,7 @@ type Story = StoryObj<typeof meta>;
 export const NoContacts: Story = {
   name: "No Contacts",
   args: {
+    variant: "standard",
     headerText: "Absent",
     contacts: [],
   },
@@ -26,6 +27,7 @@ export const NoContacts: Story = {
 
 export const StandardFullList: Story = {
   args: {
+    variant: "standard",
     headerText: "Absent",
     contacts: [
       {

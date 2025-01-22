@@ -1,5 +1,6 @@
 import { render, screen, within } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
+import { useState } from "react";
 import SearchableContactList from ".";
 import {
   absentContacts,
@@ -7,6 +8,17 @@ import {
   attendedContacts,
 } from "../../../mocks/mockContacts";
 import { type Contact, ContactStatus } from "../../../types/Contact";
+
+const WithSelectedContact = () => {
+  const [selectedContact, setSelectedContact] = useState<Contact>();
+  return (
+    <SearchableContactList
+      contacts={allContacts}
+      setSelectedContact={setSelectedContact}
+      selectedContact={selectedContact}
+    />
+  );
+};
 
 describe("SearchableContactList", () => {
   it("renders contacts under attended and absent sections", () => {
@@ -140,5 +152,32 @@ describe("SearchableContactList", () => {
     for (const email of expectedEmails) {
       expect(screen.getByText(email)).toBeInTheDocument();
     }
+  });
+
+  it("calls setSelectedContact when a contact is clicked", async () => {
+    const mockSetSelectedContact = jest.fn();
+
+    render(
+      <SearchableContactList
+        contacts={allContacts}
+        setSelectedContact={mockSetSelectedContact}
+      />,
+    );
+
+    const firstContact = allContacts[0];
+    await userEvent.click(screen.getByText(firstContact.name));
+
+    expect(mockSetSelectedContact).toHaveBeenCalledTimes(1);
+    expect(mockSetSelectedContact).toHaveBeenCalledWith(firstContact);
+  });
+
+  it("renders selected contact item", async () => {
+    render(<WithSelectedContact />);
+
+    const firstContact = allContacts[0];
+    const firstContactListItem = screen.getByText(firstContact.name);
+    await userEvent.click(firstContactListItem);
+
+    expect(firstContactListItem).toHaveClass("selected");
   });
 });

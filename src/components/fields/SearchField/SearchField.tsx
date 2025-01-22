@@ -5,16 +5,11 @@ import "@fontsource/roboto/400.css";
 import "./SearchField.css";
 
 interface SearchFieldProps {
-  placeholder?: string;
   value?: string;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const SearchField: React.FC<SearchFieldProps> = ({
-  placeholder,
-  value,
-  onChange,
-}) => {
+const SearchField: React.FC<SearchFieldProps> = ({ value, onChange }) => {
   return (
     <div className="search-field-container">
       <MagnifyingGlassIcon className="search-field-icon" />
@@ -22,7 +17,7 @@ const SearchField: React.FC<SearchFieldProps> = ({
         type="text"
         aria-label="search"
         className="search-field-input"
-        placeholder={placeholder ?? "Search"}
+        placeholder="Search"
         value={value}
         onChange={onChange}
       />

@@ -24,7 +24,7 @@ const Section: React.FC<SectionProps> = ({ children }) => {
     <div className="section-container">
       {React.Children.map(validChildren, (child, index) => (
         <div
-          className="section-child"
+          className="section-item"
           style={{ animationDelay: `${index * 0.2}s` }}
         >
           {child}

@@ -10,8 +10,7 @@ import "./ContactList.css";
 interface ContactListProps {
   headerText: string;
   contacts: Contact[];
-  variant?: "standard" | "email";
-  expanded?: boolean;
+  variant: "standard" | "email";
   setSelectedContact?: (contact: Contact) => void;
   selectedContact?: Contact;
 }
@@ -19,12 +18,11 @@ interface ContactListProps {
 const ContactList: React.FC<ContactListProps> = ({
   headerText,
   contacts,
-  variant = "standard",
-  expanded = true,
+  variant,
   setSelectedContact,
   selectedContact,
 }) => {
-  const [isExpanded, setIsExpanded] = useState(expanded);
+  const [isExpanded, setIsExpanded] = useState(true);
 
   return (
     <section className="contact-list-container">
@@ -41,8 +39,10 @@ const ContactList: React.FC<ContactListProps> = ({
               imageUrl={contact.avatarUrl}
               name={contact.name}
               email={variant === "email" ? contact.email : undefined}
-              onClick={() =>
-                setSelectedContact ? setSelectedContact(contact) : undefined
+              onClick={
+                setSelectedContact
+                  ? () => setSelectedContact(contact)
+                  : undefined
               }
               isSelected={contact.name === selectedContact?.name}
             />

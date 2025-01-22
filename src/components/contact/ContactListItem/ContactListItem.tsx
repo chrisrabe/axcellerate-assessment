@@ -35,7 +35,7 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
         <span
           className={[
             "contact-list-item-info-name",
-            isSelected && !email ? "contact-list-item-info-name-selected" : "",
+            isSelected && !email ? "selected" : "",
           ].join(" ")}
         >
           {name}
