@@ -3,7 +3,7 @@
   flex-direction: row;
   font-family: Roboto, serif;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem 1rem;
   gap: 0.5rem;
 }
 

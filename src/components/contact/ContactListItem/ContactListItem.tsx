@@ -8,6 +8,7 @@ interface ContactListItemProps {
   name: string;
   email?: string;
   isSelected?: boolean;
+  onClick?: () => void;
 }
 
 const ContactListItem: React.FC<ContactListItemProps> = ({
@@ -15,9 +16,11 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
   name,
   email,
   isSelected,
+  onClick,
 }) => {
   return (
     <div
+      onClick={onClick}
       className={[
         "contact-list-item-container",
         isSelected ? "selected" : "",

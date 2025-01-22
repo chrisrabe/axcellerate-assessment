@@ -30,8 +30,8 @@
 .contact-list-item-avatar {
   border-radius: 100%;
   object-fit: cover;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
 }
 
 .contact-list-item-info {
@@ -43,6 +43,7 @@
 .contact-list-item-info-name {
   color: var(--text-color-dark);
   font-weight: 500;
+  font-size: 0.8rem;
 }
 
 .contact-list-item-info-name-selected {
