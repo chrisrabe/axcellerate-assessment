@@ -1,0 +1,91 @@
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { ContactStatus } from "../../../types/Contact";
+import { default as ContactList } from "./ContactList";
+
+const meta = {
+  title: "Contact/ContactList",
+  component: ContactList,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "fullscreen",
+  },
+  args: {},
+} satisfies Meta<typeof ContactList>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const NoContacts: Story = {
+  name: "No Contacts",
+  args: {
+    headerText: "Absent",
+    contacts: [],
+  },
+};
+
+export const StandardFullList: Story = {
+  args: {
+    headerText: "Absent",
+    contacts: [
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+    ],
+  },
+};
+
+export const EmailVariant: Story = {
+  name: "Email Variant",
+  args: {
+    headerText: "Absent",
+    variant: "email",
+    contacts: [
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+      {
+        avatarUrl: "/placeholder-avatar.jpg",
+        name: "Jane Doe",
+        email: "jane@hotmail.com",
+        status: ContactStatus.Absent,
+      },
+    ],
+  },
+};

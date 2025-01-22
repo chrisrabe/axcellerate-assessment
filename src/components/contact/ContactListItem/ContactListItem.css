@@ -23,7 +23,7 @@
   cursor: pointer;
 }
 
-.contact-list-item-container-selected {
+.contact-list-item-container.selected {
   background-color: var(--highlight-primary);
 }
 

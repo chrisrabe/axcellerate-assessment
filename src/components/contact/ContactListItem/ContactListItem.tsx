@@ -1,5 +1,6 @@
 import type React from "react";
-import "@fontsource/roboto";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/400.css";
 import "./ContactListItem.css";
 
 interface ContactListItemProps {
@@ -19,7 +20,7 @@ const ContactListItem: React.FC<ContactListItemProps> = ({
     <div
       className={[
         "contact-list-item-container",
-        isSelected ? "contact-list-item-container-selected" : "",
+        isSelected ? "selected" : "",
       ].join(" ")}
     >
       <img
