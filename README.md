@@ -40,6 +40,8 @@ Once all behaviours and scenarios are covered from the entrypoint, I analyse the
 and critically assess whether the line of code requires a test or can be removed. This ensures that
 the code I create is lean and purposeful.
 
+![Test Results](docs/test-results.png)
+
 #### Technology of Choice
 
 Since the purpose of the assessment is to eventually create a component library, I imagined that bundle size is an important
